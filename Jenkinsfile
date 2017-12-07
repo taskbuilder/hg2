@@ -5,7 +5,7 @@ properties([
     projectUrlStr: 'https://github.com/taskbuilder/hg2'],
      upstream(
       threshold: 'SUCCESS',
-      upstreamProjects: 'https://github.com/taskbuilder/hg3/master'
+      upstreamProjects: 'https://github.com/taskbuilder/hg3/master')
     ])
     pipeline {
     agent any 
