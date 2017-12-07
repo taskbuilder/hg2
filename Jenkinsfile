@@ -8,26 +8,3 @@ properties([
       upstreamProjects: 'https://github.com/taskbuilder/hg3/master'
     )
 
-pipeline {
-    agent any 
-
-    stages {
-        stage('Build') { 
-            steps { 
-                sh 'pwd' 
-            }
-        }
-        stage('Test'){
-            steps {
-                sh 'java -version'
-                
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'ls'
-                sh 'pwd'
-            }
-        }
-    }
-}
