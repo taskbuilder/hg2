@@ -2,11 +2,14 @@
 properties([
     [$class: 'GithubProjectProperty',
     displayName: '',
-    projectUrlStr: 'https://github.com/taskbuilder/hg2'],
-     upstream(
+    projectUrlStr: 'https://github.com/taskbuilder/hg2/'],
+     pipelineTriggers([
+     
+    upstream(
       threshold: 'SUCCESS',
-      upstreamProjects: 'https://github.com/taskbuilder/hg3/master')
+      upstreamProjects: 'https://github.com/taskbuilder/hg3.git')
     ])
+])
     pipeline {
     agent any 
 
